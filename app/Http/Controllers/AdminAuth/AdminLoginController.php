@@ -42,7 +42,7 @@ class AdminLoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('admin.guest')->except('logout');//middleware check nếu đã đăng nhập admin thì k cho vào form đăng nhập nữa
+        //$this->middleware('admin.guest')->except('logout');//middleware check nếu đã đăng nhập admin thì k cho vào form đăng nhập nữa
     }
     protected function guard()
     {
@@ -55,5 +55,9 @@ class AdminLoginController extends Controller
         // $request->session()->invalidate();
 
         return redirect('admin/login');
+    }
+    protected function loggedOut(Request $request)
+    {
+       return redirect()->route('admin.showLoginForm');
     }
 }

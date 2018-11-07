@@ -8,8 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Admin extends Model
 {
-    use Notifiable;
-    
+    // use Notifiable;
+
     /**
      * The attributes that are mass assignable.
      *

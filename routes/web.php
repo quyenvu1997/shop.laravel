@@ -33,7 +33,7 @@ Route::prefix('admin')->group(function(){
 	Route::post('logout', 'AdminAuth\AdminLoginController@logout')->name('admin.logout');
 	Route::get('register', 'AdminAuth\AdminRegisterController@showRegistrationForm')->name('admin.register');
 	Route::post('register', 'AdminAuth\AdminRegisterController@register')->name('admin.signup');
-	Route::middleware('admin.auth')->group(function(){
+	Route::middleware('admin')->group(function(){
 		Route::get('/',function(){
 			return view('admin.home');
 		});		
