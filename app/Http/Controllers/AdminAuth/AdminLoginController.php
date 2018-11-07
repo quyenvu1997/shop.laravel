@@ -29,7 +29,7 @@ class AdminLoginController extends Controller
      * @var string
      */
     
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/admin/home';
 
     public function showLoginForm()
     {
